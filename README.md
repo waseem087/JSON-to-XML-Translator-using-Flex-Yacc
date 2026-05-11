@@ -101,6 +101,8 @@ For the input:
 ```json
 {"author": {"uid": "u1", "name": "Sara"}, "published": true}
 ```
+<img width="688" height="433" alt="image" src="https://github.com/user-attachments/assets/e714f5b8-3238-4f14-a78a-d6c11fb06a18" />
+<img width="391" height="161" alt="image" src="https://github.com/user-attachments/assets/f3f92101-8c2a-4164-bfb4-a475bbe465b7" />
 
 The AST is:
 ```
