@@ -1,0 +1,9 @@
+﻿{
+  "challenge": "Unseen JSON",
+  "data": {
+    "scientific": [1.23e4, -5.6E-2],
+    "unicode": "Smile \u263A and Peace \u270C",
+    "nesting": [[[[1]]]],
+    "escapes": "Tab\tNewline\nQuote\"Slash/Backslash\\"
+  }
+}

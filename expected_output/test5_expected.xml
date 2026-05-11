@@ -1,0 +1,28 @@
+<root>
+  <university>FAST-NUCES</university>
+  <department>Computer Science</department>
+  <courses>
+    <item>
+      <code>CS4031</code>
+      <title>Compiler Construction</title>
+      <credits>3</credits>
+      <active>true</active>
+    </item>
+    <item>
+      <code>CS3001</code>
+      <title>Operating Systems</title>
+      <credits>3</credits>
+      <active>false</active>
+    </item>
+  </courses>
+  <location>
+    <city>Islamabad</city>
+    <campus>Chiniot-Faisalabad</campus>
+    <coordinates>
+      <lat>33.6844</lat>
+      <lng>73.0479</lng>
+    </coordinates>
+  </location>
+  <established>2000</established>
+  <accreditation/>
+</root>

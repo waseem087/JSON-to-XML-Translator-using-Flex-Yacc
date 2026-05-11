@@ -1,0 +1,13 @@
+<root>
+  <name>Naveed Ahmed</name>
+  <rollNumber>i220889</rollNumber>
+  <isEnrolled>true</isEnrolled>
+  <hasGraduated>false</hasGraduated>
+  <gpa>3.75</gpa>
+  <skills>
+    <item>C</item>
+    <item>Python</item>
+    <item>Java</item>
+  </skills>
+  <advisor/>
+</root>

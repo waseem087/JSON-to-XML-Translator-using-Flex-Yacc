@@ -1,0 +1,9 @@
+{
+  "name": "Naveed Ahmed",
+  "rollNumber": "i220889",
+  "isEnrolled": true,
+  "hasGraduated": false,
+  "gpa": 3.75,
+  "skills": ["C", "Python", "Java"],
+  "advisor": null
+}

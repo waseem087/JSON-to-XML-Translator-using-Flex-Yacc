@@ -1,0 +1,8 @@
+{
+  "html": "<div class=\"main\">Hello & welcome</div>",
+  "path": "C:\\Users\\test\\file.txt",
+  "quote": "He said \"hello\"",
+  "tabs": "col1\tcol2\tcol3",
+  "multiline": "line1\nline2\nline3",
+  "unicode": "\u0048\u0065\u006C\u006C\u006F"
+}

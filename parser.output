@@ -1,0 +1,322 @@
+Grammar
+
+    0 $accept: json $end
+
+    1 json: value
+
+    2 value: object
+    3      | array
+    4      | STRING_LIT
+    5      | NUMBER
+    6      | T_TRUE
+    7      | T_FALSE
+    8      | T_NULL
+
+    9 object: LBRACE RBRACE
+   10       | LBRACE members RBRACE
+
+   11 members: pair
+   12        | members COMMA pair
+
+   13 pair: STRING_LIT COLON value
+
+   14 array: LBRACKET RBRACKET
+   15      | LBRACKET elements RBRACKET
+
+   16 elements: value
+   17         | elements COMMA value
+
+
+Terminals, with rules where they appear
+
+    $end (0) 0
+    error (256)
+    LBRACE (258) 9 10
+    RBRACE (259) 9 10
+    LBRACKET (260) 14 15
+    RBRACKET (261) 14 15
+    COLON (262) 13
+    COMMA (263) 12 17
+    STRING_LIT <string_val> (264) 4 13
+    NUMBER <number_val> (265) 5
+    T_TRUE <bool_val> (266) 6
+    T_FALSE <bool_val> (267) 7
+    T_NULL (268) 8
+
+
+Nonterminals, with rules where they appear
+
+    $accept (14)
+        on left: 0
+    json <node> (15)
+        on left: 1
+        on right: 0
+    value <node> (16)
+        on left: 2 3 4 5 6 7 8
+        on right: 1 13 16 17
+    object <node> (17)
+        on left: 9 10
+        on right: 2
+    members <node> (18)
+        on left: 11 12
+        on right: 10 12
+    pair <node> (19)
+        on left: 13
+        on right: 11 12
+    array <node> (20)
+        on left: 14 15
+        on right: 3
+    elements <node> (21)
+        on left: 16 17
+        on right: 15 17
+
+
+State 0
+
+    0 $accept: • json $end
+
+    LBRACE      shift, and go to state 1
+    LBRACKET    shift, and go to state 2
+    STRING_LIT  shift, and go to state 3
+    NUMBER      shift, and go to state 4
+    T_TRUE      shift, and go to state 5
+    T_FALSE     shift, and go to state 6
+    T_NULL      shift, and go to state 7
+
+    json    go to state 8
+    value   go to state 9
+    object  go to state 10
+    array   go to state 11
+
+
+State 1
+
+    9 object: LBRACE • RBRACE
+   10       | LBRACE • members RBRACE
+
+    RBRACE      shift, and go to state 12
+    STRING_LIT  shift, and go to state 13
+
+    members  go to state 14
+    pair     go to state 15
+
+
+State 2
+
+   14 array: LBRACKET • RBRACKET
+   15      | LBRACKET • elements RBRACKET
+
+    LBRACE      shift, and go to state 1
+    LBRACKET    shift, and go to state 2
+    RBRACKET    shift, and go to state 16
+    STRING_LIT  shift, and go to state 3
+    NUMBER      shift, and go to state 4
+    T_TRUE      shift, and go to state 5
+    T_FALSE     shift, and go to state 6
+    T_NULL      shift, and go to state 7
+
+    value     go to state 17
+    object    go to state 10
+    array     go to state 11
+    elements  go to state 18
+
+
+State 3
+
+    4 value: STRING_LIT •
+
+    $default  reduce using rule 4 (value)
+
+
+State 4
+
+    5 value: NUMBER •
+
+    $default  reduce using rule 5 (value)
+
+
+State 5
+
+    6 value: T_TRUE •
+
+    $default  reduce using rule 6 (value)
+
+
+State 6
+
+    7 value: T_FALSE •
+
+    $default  reduce using rule 7 (value)
+
+
+State 7
+
+    8 value: T_NULL •
+
+    $default  reduce using rule 8 (value)
+
+
+State 8
+
+    0 $accept: json • $end
+
+    $end  shift, and go to state 19
+
+
+State 9
+
+    1 json: value •
+
+    $default  reduce using rule 1 (json)
+
+
+State 10
+
+    2 value: object •
+
+    $default  reduce using rule 2 (value)
+
+
+State 11
+
+    3 value: array •
+
+    $default  reduce using rule 3 (value)
+
+
+State 12
+
+    9 object: LBRACE RBRACE •
+
+    $default  reduce using rule 9 (object)
+
+
+State 13
+
+   13 pair: STRING_LIT • COLON value
+
+    COLON  shift, and go to state 20
+
+
+State 14
+
+   10 object: LBRACE members • RBRACE
+   12 members: members • COMMA pair
+
+    RBRACE  shift, and go to state 21
+    COMMA   shift, and go to state 22
+
+
+State 15
+
+   11 members: pair •
+
+    $default  reduce using rule 11 (members)
+
+
+State 16
+
+   14 array: LBRACKET RBRACKET •
+
+    $default  reduce using rule 14 (array)
+
+
+State 17
+
+   16 elements: value •
+
+    $default  reduce using rule 16 (elements)
+
+
+State 18
+
+   15 array: LBRACKET elements • RBRACKET
+   17 elements: elements • COMMA value
+
+    RBRACKET  shift, and go to state 23
+    COMMA     shift, and go to state 24
+
+
+State 19
+
+    0 $accept: json $end •
+
+    $default  accept
+
+
+State 20
+
+   13 pair: STRING_LIT COLON • value
+
+    LBRACE      shift, and go to state 1
+    LBRACKET    shift, and go to state 2
+    STRING_LIT  shift, and go to state 3
+    NUMBER      shift, and go to state 4
+    T_TRUE      shift, and go to state 5
+    T_FALSE     shift, and go to state 6
+    T_NULL      shift, and go to state 7
+
+    value   go to state 25
+    object  go to state 10
+    array   go to state 11
+
+
+State 21
+
+   10 object: LBRACE members RBRACE •
+
+    $default  reduce using rule 10 (object)
+
+
+State 22
+
+   12 members: members COMMA • pair
+
+    STRING_LIT  shift, and go to state 13
+
+    pair  go to state 26
+
+
+State 23
+
+   15 array: LBRACKET elements RBRACKET •
+
+    $default  reduce using rule 15 (array)
+
+
+State 24
+
+   17 elements: elements COMMA • value
+
+    LBRACE      shift, and go to state 1
+    LBRACKET    shift, and go to state 2
+    STRING_LIT  shift, and go to state 3
+    NUMBER      shift, and go to state 4
+    T_TRUE      shift, and go to state 5
+    T_FALSE     shift, and go to state 6
+    T_NULL      shift, and go to state 7
+
+    value   go to state 27
+    object  go to state 10
+    array   go to state 11
+
+
+State 25
+
+   13 pair: STRING_LIT COLON value •
+
+    $default  reduce using rule 13 (pair)
+
+
+State 26
+
+   12 members: members COMMA pair •
+
+    $default  reduce using rule 12 (members)
+
+
+State 27
+
+   17 elements: elements COMMA value •
+
+    $default  reduce using rule 17 (elements)
