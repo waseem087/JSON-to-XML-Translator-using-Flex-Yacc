@@ -4,7 +4,7 @@
 
 **Language:** C (with Flex & Bison)
 
-### Run All Tests
+### Run All Tests 
 ```bash
 $env:PATH = "C:\msys64\mingw64\bin;C:\msys64\usr\bin;$env:PATH"; make test
 ```
