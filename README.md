@@ -14,12 +14,12 @@ $env:PATH = "C:\msys64\mingw64\bin;C:\msys64\usr\bin;$env:PATH"; make test
 
 
 
-<img width="616" height="281" alt="image" src="https://github.com/user-attachments/assets/30936396-3111-4b05-b3da-fcb9bcddda46" />
+
 
 ## Overview
 
 A compiler-style translator that reads valid JSON input, parses it using **Flex** (lexer) and **Bison** (parser), constructs an **Abstract Syntax Tree (AST)**, and converts the input into well-formed **XML** output.
-
+<img width="616" height="281" alt="image" src="https://github.com/user-attachments/assets/30936396-3111-4b05-b3da-fcb9bcddda46" />
 ### Pipeline
 
 ```
