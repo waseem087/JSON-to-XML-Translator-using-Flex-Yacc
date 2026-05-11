@@ -167,6 +167,7 @@ Error: syntax error at line 1, column 11
 ```
 
 ---
+<img width="713" height="43" alt="image" src="https://github.com/user-attachments/assets/ff1f4f70-a01f-43c1-9744-19814ffee9bd" />
 
 ## Bonus Features Implemented
 
