@@ -168,11 +168,11 @@ Error: syntax error at line 1, column 11
 
 | Feature                        | Status |
 |--------------------------------|--------|
-| Pretty-printed XML             | ✅ (+2) |
-| AST printing (`--ast` flag)    | ✅ (+2) |
-| Column-based error detail      | ✅ (+2) |
-| Unicode escape support (`\uXXXX`) | ✅ (+2) |
-| Scientific notation support    | ✅ (+2) |
+| Pretty-printed XML             |  (+2) |
+| AST printing (`--ast` flag)    |  (+2) |
+| Column-based error detail      |  (+2) |
+| Unicode escape support (`\uXXXX`) |  (+2) |
+| Scientific notation support    |  (+2) |
 
 **Total Bonus: +10 marks**
 
