@@ -1,7 +1,7 @@
 # JSON to XML Translator
 
 **CS-4031 Compiler Construction — Assignment 04**  
-**Author:** Naveed Ahmed (i220889)  
+
 **Language:** C (with Flex & Bison)
 
 ### Run All Tests
