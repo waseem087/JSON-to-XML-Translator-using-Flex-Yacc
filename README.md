@@ -116,6 +116,7 @@ OBJECT (2 pairs)
 ```
 
 ---
+<img width="401" height="358" alt="image" src="https://github.com/user-attachments/assets/7b50e079-7b08-42b8-a5c4-5cff75bf9900" />
 
 ## Conversion Rules
 
