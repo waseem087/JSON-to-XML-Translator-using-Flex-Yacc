@@ -185,6 +185,7 @@ Error: syntax error at line 1, column 11
 **Total Bonus: +10 marks**
 
 ---
+<img width="539" height="145" alt="image" src="https://github.com/user-attachments/assets/d8e95140-93f6-465e-8bd7-8972ed3e2b65" />
 
 ## File Structure
 
